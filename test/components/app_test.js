@@ -12,18 +12,8 @@ describe('App', () => {
     expect(component.find('.comment-box')).to.exist;
   });
 
-  describe('entering some text', () => {    
-    beforeEach(() => {
-      component.find('textarea').simulate('change', 'new comment');
-    });
-
-    it('show that text in the text area', () => {
-      expect(component.find('textarea')).to.have.value('new comment');
-    });
-  
-    it('when submitted, clears the input', () => {
-
-    });
+  it('shows a comment list', () => {
+    expect(component.find('.comment-list')).to.exist;
   });
 
 });
